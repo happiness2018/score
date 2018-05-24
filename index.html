@@ -4,6 +4,7 @@
   <title></title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="./js/my.js"></script>
   <style type="text/css">
   .div-container{
     border: 1px solid black;
@@ -56,60 +57,9 @@
   </div>
   </div>
 
-<p><span id="myConf">Ici apparaîtra le message de confirmation après la soumission.
-</span></p>
+<p><span id="myConf">Ici apparaîtra le message de confirmation après la soumission.</span></p>
 <script type="text/javascript">
-  $(document).ready(function(){
-    // References:
-    var $form1 = $('#myForm1');
-    var $form2 = $('#myForm2');
-    var $form3 = $('#myForm3');
-    var $conf = $('#myConf');
-    var $subm1 = $('#mySubmit1');
-    var $subm2 = $('#mySubmit2');
-    var $subm3 = $('#mySubmit3');
-    //var $impt = $form.find(':input').not(':button, :submit, :reset, :hidden');
- // Submit function:
-    $form1.submit(function(){
-        $.post($(this).attr('action'), $(this).serialize(), function(response){
-      // On success, clear all inputs;
-      //    $impt.val('').attr('value','').removeAttr('checked').removeAttr('selected');
-   // Write a confirmation message:
-            $conf.html("Submitted RED!");
-   // Disable the submit button:
-          $subm1.prop('disabled', true);
-          $subm2.prop('disabled', true);
-          $subm3.prop('disabled', true);
-        },'json');
-        return false;
-    });
-    $form2.submit(function(){
-        $.post($(this).attr('action'), $(this).serialize(), function(response){
-      // On success, clear all inputs;
-      //    $impt.val('').attr('value','').removeAttr('checked').removeAttr('selected');
-   // Write a confirmation message:
-            $conf.html("Submitted YELLOW!");
-   // Disable the submit button:
-          $subm1.prop('disabled', true);
-          $subm2.prop('disabled', true);
-          $subm3.prop('disabled', true);
-        },'json');
-        return false;
-    });
-    $form3.submit(function(){
-        $.post($(this).attr('action'), $(this).serialize(), function(response){
-      // On success, clear all inputs;
-      //    $impt.val('').attr('value','').removeAttr('checked').removeAttr('selected');
-   // Write a confirmation message:
-            $conf.html("Submitted GREEN!");
-   // Disable the submit button:
-          $subm1.prop('disabled', true);
-          $subm2.prop('disabled', true);
-          $subm3.prop('disabled', true);
-        },'json');
-        return false;
-    });
-});
+
 </script>
 </body>
 </html>

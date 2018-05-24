@@ -1,0 +1,51 @@
+  $(document).ready(function(){
+    // References:
+    var $form1 = $('#myForm1');
+    var $form2 = $('#myForm2');
+    var $form3 = $('#myForm3');
+    var $conf = $('#myConf');
+    var $subm1 = $('#mySubmit1');
+    var $subm2 = $('#mySubmit2');
+    var $subm3 = $('#mySubmit3');
+    //var $impt = $form.find(':input').not(':button, :submit, :reset, :hidden');
+ // Submit function:
+    $form1.submit(function(){
+        $.post($(this).attr('action'), $(this).serialize(), function(response){
+      // On success, clear all inputs;
+      //    $impt.val('').attr('value','').removeAttr('checked').removeAttr('selected');
+   // Write a confirmation message:
+            $conf.html("Submitted RED! - Thanks!!");
+   // Disable the submit button:
+          $subm1.prop('disabled', true);
+          $subm2.prop('disabled', true);
+          $subm3.prop('disabled', true);
+        },'json');
+        return false;
+    });
+    $form2.submit(function(){
+        $.post($(this).attr('action'), $(this).serialize(), function(response){
+      // On success, clear all inputs;
+      //    $impt.val('').attr('value','').removeAttr('checked').removeAttr('selected');
+   // Write a confirmation message:
+            $conf.html("Submitted YELLOW! - Thanks!!");
+   // Disable the submit button:
+          $subm1.prop('disabled', true);
+          $subm2.prop('disabled', true);
+          $subm3.prop('disabled', true);
+        },'json');
+        return false;
+    });
+    $form3.submit(function(){
+        $.post($(this).attr('action'), $(this).serialize(), function(response){
+      // On success, clear all inputs;
+      //    $impt.val('').attr('value','').removeAttr('checked').removeAttr('selected');
+   // Write a confirmation message:
+            $conf.html("Submitted GREEN! - Thanks!!");
+   // Disable the submit button:
+          $subm1.prop('disabled', true);
+          $subm2.prop('disabled', true);
+          $subm3.prop('disabled', true);
+        },'json');
+        return false;
+    });
+});
