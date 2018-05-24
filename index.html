@@ -2,23 +2,62 @@
 <html>
 <head>
   <title></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <style type="text/css">
+  .div-container{
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 50vh; /* poussé de la moitié de hauteur de viewport */
+    transform: translateY(-50%); /* tiré de la moitié de sa propre hauteur */
+ }
+
+  input.btn{
+    padding: 15px 63px;
+    font-size: 20px;
+  }
+
+  form{
+    padding: 10px;
+    margin: 10px;
+  }
+
+  </style>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet"/>
 </head>
 <body>
-<form id="myForm1" action="https://script.google.com/macros/s/AKfycbztQkirvizVwMBJaZ919k4fV5poTyqxu4raYd92XR6A2bByhOO-/exec">
-    <input type="text" name="button" value="0" hidden="true" >
-    <input type="submit" id="mySubmit1" value="Rouge">
-</form>
-<form id="myForm2" action="https://script.google.com/macros/s/AKfycbztQkirvizVwMBJaZ919k4fV5poTyqxu4raYd92XR6A2bByhOO-/exec">
-    <input type="text" name="button" value="1" hidden="true">
-    <input type="submit" id="mySubmit2" value="Jaune">
-</form>
-<form id="myForm3" action="https://script.google.com/macros/s/AKfycbztQkirvizVwMBJaZ919k4fV5poTyqxu4raYd92XR6A2bByhOO-/exec">
-    <input type="text" name="button" value="2" hidden="true">
-    <input type="submit" id="mySubmit3" value="Vert">
-</form>
+  
+  <div class='div-container'>
+  <div class='row'>
+    <H4> Alors, comment tu te sens aujourd'hui ? </H4>
+    <div class='col-sm-4'> 
+    <form id="myForm1" action="https://script.google.com/macros/s/AKfycbztQkirvizVwMBJaZ919k4fV5poTyqxu4raYd92XR6A2bByhOO-/exec">
+        <input type="text" name="button" value="0" hidden="true" >
+        <input type="submit" id="mySubmit1" value="Pas Bien" class='btn btn-danger'>
+    </form>
+    </div>
 
-<p><span id="myConf">This is where the confirmation message will appear after submission.</span></p>
+    <div class='col-sm-4'>
+    <form id="myForm2" action="https://script.google.com/macros/s/AKfycbztQkirvizVwMBJaZ919k4fV5poTyqxu4raYd92XR6A2bByhOO-/exec">
+        <input type="text" name="button" value="1" hidden="true">
+        <input type="submit" id="mySubmit2" value="Normal" class='btn btn-warning'>
+    </form>
+    </div>
+
+    <div class='col-sm-4'>
+    <form id="myForm3" action="https://script.google.com/macros/s/AKfycbztQkirvizVwMBJaZ919k4fV5poTyqxu4raYd92XR6A2bByhOO-/exec">
+        <input type="text" name="button" value="2" hidden="true">
+        <input type="submit" id="mySubmit3" value="Trés bien" class='btn btn-success'>
+    </form>
+    </div>
+  </div>
+  </div>
+
+<p><span id="myConf">Ici apparaîtra le message de confirmation après la soumission.
+</span></p>
 <script type="text/javascript">
   $(document).ready(function(){
     // References:
