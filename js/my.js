@@ -14,7 +14,8 @@
       // On success, clear all inputs;
       //    $impt.val('').attr('value','').removeAttr('checked').removeAttr('selected');
    // Write a confirmation message:
-            $conf.html("Submitted RED! - Thanks!!");
+            $conf.html("N'oubliez pas de répondre au questionnaire :");
+            $conf.append("<a href='https://goo.gl/69khDp' target='_blank'> Questionnaire </a>");
    // Disable the submit button:
           $subm1.prop('disabled', true);
           $subm2.prop('disabled', true);
@@ -27,8 +28,9 @@
       // On success, clear all inputs;
       //    $impt.val('').attr('value','').removeAttr('checked').removeAttr('selected');
    // Write a confirmation message:
-            $conf.html("Submitted YELLOW! - Thanks!!");
-   // Disable the submit button:
+            $conf.html("N'oubliez pas de répondre au questionnaire :");
+            $conf.append("<a href='https://goo.gl/69khDp' target='_blank'> Questionnaire </a>");
+               // Disable the submit button:
           $subm1.prop('disabled', true);
           $subm2.prop('disabled', true);
           $subm3.prop('disabled', true);
@@ -40,8 +42,9 @@
       // On success, clear all inputs;
       //    $impt.val('').attr('value','').removeAttr('checked').removeAttr('selected');
    // Write a confirmation message:
-            $conf.html("Submitted GREEN! - Thanks!!");
-   // Disable the submit button:
+            $conf.html("N'oubliez pas de répondre au questionnaire :");
+            $conf.append("<a href='https://goo.gl/69khDp' target='_blank'> Questionnaire </a>");
+               // Disable the submit button:
           $subm1.prop('disabled', true);
           $subm2.prop('disabled', true);
           $subm3.prop('disabled', true);
