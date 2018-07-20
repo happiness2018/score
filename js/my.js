@@ -42,7 +42,7 @@
       // On success, clear all inputs;
       //    $impt.val('').attr('value','').removeAttr('checked').removeAttr('selected');
    // Write a confirmation message:
-            $conf.html("Merci, n'oubliez pas de remplir 2 fois par jour, en arrivant au lab et en rentrant chez vous");
+            $conf.html("Merci, n'oubliez pas de revenir ici 2 fois par jour, le matin en arrivant au lab et le soir avant de rentrer chez vous");
             //$conf.append("<a href='https://goo.gl/69khDp' target='_blank'> Questionnaire </a>");
                // Disable the submit button:
           $subm1.prop('disabled', true);
